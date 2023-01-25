@@ -1,0 +1,67 @@
+$component-name: c-button;
+
+$primary-color: #1fb5ed;
+$secondary-color: #bf1a39;
+
+@mixin c-button {
+	--button-font-family: var(--font-family-1);
+	-webkit-appearance: none !important;
+	border: 3px solid;
+	border-radius: rem(8);
+	cursor: pointer;
+	font-family: var(--button-font-family);
+	font-size: rem(14);
+	font-weight: 600;
+	outline: 0;
+	padding: rem(15) rem(15);
+	text-align: center;
+	text-transform: uppercase;
+	transition: 300ms ease all;
+	width: fit-content;
+	&:focus,
+	&:active {
+		border: none;
+		box-shadow: none;
+		outline: 2px solid var(--theme-color-2);
+	}
+
+	@include breakpoint($tablet-breakpoint) {
+		font-size: rem(20);
+	}
+}
+
+@mixin c-button--primary() {
+	background-color: $primary-color;
+	border-color: darken($primary-color, 10%);
+	box-shadow: 0 0 0 3px $primary-color, var(--theme-box-shadow);
+	color: var(--text-color-1) !important;
+	&:hover {
+		background-color: darken($primary-color, 20%);
+		border-color: darken($primary-color, 30%);
+		box-shadow: 0 0 0 3px darken($primary-color, 20%), var(--theme-box-shadow);
+	}
+}
+
+@mixin c-button--secondary() {
+	background-color: $secondary-color;
+	border-color: darken($secondary-color, 10%);
+	box-shadow: 0 0 0 3px $secondary-color, var(--theme-box-shadow);
+	color: var(--text-color-1) !important;
+	&:hover {
+		background-color: darken($secondary-color, 20%);
+		border-color: darken($secondary-color, 30%);
+		box-shadow: 0 0 0 3px darken($secondary-color, 20%), var(--theme-box-shadow);
+	}
+}
+
+.#{$component-name} {
+	@include c-button;
+}
+
+.#{$component-name}--primary {
+	@include c-button--primary;
+}
+
+.#{$component-name}--secondary {
+	@include c-button--secondary;
+}

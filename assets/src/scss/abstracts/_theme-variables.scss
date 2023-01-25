@@ -1,0 +1,65 @@
+/*! Theme Name: Landing Page - Castro */
+$tablet-breakpoint: 600;
+$desktop-breakpoint: 1200;
+
+$title-mobile: rem(30);
+$title-tablet: rem(30);
+$title-desktop: rem(40);
+
+$font-size-mobile: rem(18);
+$font-size-tablet: rem(40);
+$font-size-desktop: rem(65);
+
+:root {
+	--theme-color-1: #05498e;
+	--theme-color-2: #0fb2ec;
+	--theme-color-3: #9ba8b5;
+	--theme-color-4: #36b3a9;
+	--theme-color-5: #bf1a39;
+	--theme-color-6: #f6f6f6;
+
+	--text-color-1: #fff;
+	--text-color-2: #222;
+
+	--font-family-1: "Montserrat", sans-serif;
+	--font-family-2: "Varela Round", sans-serif;
+
+	--theme-transition: all 0.3s ease-out;
+	--theme-box-shadow: 3px 5px 5px #333;
+}
+
+$theme-default-transition: all 0.3s ease-out;
+$theme-box-shadow: 10px 10px 10px var(-- --theme-color-2);
+
+body {
+	font-family: var(--font-family-1);
+}
+
+/*SOCIAL COLORS*/
+$social-media-colors: (
+	"facebook": #3b5998,
+	"twitter": #00aced,
+	"linkedin": #0077b5,
+	"youtube": #cd201f,
+	"instagram": #e4405f,
+	"github": #333,
+	"telegram": #08c,
+	"whatsapp": #34af23,
+	"rss": #f26522,
+);
+
+@function social-media-color($social) {
+	@return map-get($social-media-colors, $social);
+}
+
+// ==========================================================================
+// Measures
+// ==========================================================================
+
+$global-max-width-raw: 1400;
+$global-max-width: 1400px;
+$global-font-size: rem(18);
+$global-line-height: 1.5;
+$global-radius: rem(10);
+$global-border-radius: rem(7);
+$global-module-size: rem(20);

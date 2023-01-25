@@ -1,0 +1,74 @@
+$layout-name: l-header;
+
+.#{$layout-name} {
+	background-color: transparent;
+	display: flex;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	&__content {
+		@include content;
+		position: relative;
+		width: 100%;
+		&::before {
+			background-color: var(--theme-color-1);
+			content: "";
+			display: flex;
+			height: 100%;
+			left: calc(-100% + 10px);
+			position: absolute;
+			width: 100%;
+		}
+	}
+
+	&__logo {
+		background-color: var(--theme-color-1);
+		padding: rem(50);
+		position: relative;
+
+		&::after {
+			background-color: var(--theme-color-1);
+			box-shadow: 3px -5px 5px #333;
+			content: "";
+			display: flex;
+			height: calc(100% + 5px);
+			position: absolute;
+			right: rem(-18);
+			top: rem(-8);
+			transform: rotate(10deg);
+			width: rem(50);
+		}
+
+		& span {
+			background-color: var(--theme-color-5);
+			bottom: 0;
+			display: flex;
+			height: calc(100% + 5px);
+			position: absolute;
+			right: rem(-25);
+			width: rem(25);
+			&::after {
+				background-color: var(--theme-color-5);
+				content: "";
+				display: flex;
+				height: calc(100% + 5px);
+				position: absolute;
+				right: rem(-18);
+				top: rem(-8);
+				transform: rotate(10deg);
+				width: rem(50);
+			}
+		}
+	}
+
+	&__product-logo {
+		display: none;
+		@include breakpoint($desktop-breakpoint) {
+			display: flex;
+			position: absolute;
+			right: 0;
+			top: 50%;
+		}
+	}
+}
