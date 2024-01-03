@@ -1,6 +1,6 @@
 # Landing Page - Castro
 
-Simple landing page made for a cosutumer in Brazil. The case is a company that sells water purifiers. The page is made with HTML, SCSS and Javascript and the idea is use it as basis for future landing page projects.
+Simple landing page made for a costumer in Brazil. The case is a company that sells water purifiers. The page is made with HTML, SCSS and Javascript and the idea is use it as basis for future landing page projects.
 
 # Technologies used
 <ul>
